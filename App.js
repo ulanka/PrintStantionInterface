@@ -10,7 +10,8 @@ import Spinner from 'react-native-loading-spinner-overlay';
 YellowBox.ignoreWarnings([
     'Unrecognized WebSocket connection option(s) `agent`, `perMessageDeflate`, `pfx`, `key`, `passphrase`, `cert`, `ca`, `ciphers`, `rejectUnauthorized`. Did you mean to put these under `headers`?'
 ]);
-
+// I am aware of that I suppose to separate every class to its own file. 
+// I will separate some class to its own file when it is fully ready to do not come back to it anymore and just use it.
 class SignUpScreen extends React.Component {
   static navigationOptions = {
     title: 'Sign Up'
@@ -245,7 +246,7 @@ class PrintfileScreen extends React.Component {
     if (this.state.allFiles.filter((file)=> file.value==this.state.currentModalFile)[0].pin==this.state.pinFromModalWindow){
       this.setState((prevState)=>({selectedFiles:[...prevState.selectedFiles,
         this.state.allFiles.filter((file)=> file.value==this.state.currentModalFile)[0]],currentModalFile:"",pinFromModalWindow:""}))
-        
+
     }
   }
   render(){
